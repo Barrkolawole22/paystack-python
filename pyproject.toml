@@ -9,10 +9,10 @@ description = "Clean, fully-typed Python SDK for the Paystack API — full surfa
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
-authors = [{ name = "Your Name", email = "you@example.com" }]
+authors = [{ name = "Barrkolawole22", email = "Barrkolawole22@users.noreply.github.com" }]
 keywords = ["paystack", "payments", "nigeria", "fintech", "api", "sdk"]
 classifiers = [
-    "Development Status :: 5 - Production/Stable",
+    "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
@@ -40,10 +40,9 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/paystack-python"
-Documentation = "https://paystack-python.readthedocs.io"
-Repository = "https://github.com/yourusername/paystack-python"
-"Bug Tracker" = "https://github.com/yourusername/paystack-python/issues"
+Homepage = "https://github.com/Barrkolawole22/paystack-python"
+Repository = "https://github.com/Barrkolawole22/paystack-python"
+"Bug Tracker" = "https://github.com/Barrkolawole22/paystack-python/issues"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
