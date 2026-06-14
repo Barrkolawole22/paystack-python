@@ -1,25 +1,26 @@
 # paystack-python
 
-A clean, fully-typed Python SDK for the [Paystack](https://paystack.com) API — complete surface coverage, Pydantic v2 models, and automatic retry logic.
+A clean, fully-typed Python SDK for the [Paystack](https://paystack.com) API — full surface coverage, Pydantic v2 models, and automatic retry logic.
 
-[![PyPI version](https://img.shields.io/pypi/v/paystack-python.svg)](https://pypi.org/project/paystack-python/)
-[![Python versions](https://img.shields.io/pypi/pyversions/paystack-python.svg)](https://pypi.org/project/paystack-python/)
-[![Tests](https://github.com/yourusername/paystack-python/actions/workflows/publish.yml/badge.svg)](https://github.com/yourusername/paystack-python/actions)
-[![Coverage](https://codecov.io/gh/yourusername/paystack-python/branch/main/graph/badge.svg)](https://codecov.io/gh/yourusername/paystack-python)
+[![PyPI version](https://img.shields.io/pypi/v/paystack-sdk-python.svg)](https://pypi.org/project/paystack-sdk-python/)
+[![Python versions](https://img.shields.io/pypi/pyversions/paystack-sdk-python.svg)](https://pypi.org/project/paystack-sdk-python/)
+[![Tests](https://github.com/Barrkolawole22/paystack-python/actions/workflows/publish.yml/badge.svg)](https://github.com/Barrkolawole22/paystack-python/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
 
 ## Why this exists
 
-The official Paystack Python library covers less than 30% of the API surface and hasn't been updated in years. Nigerian developers waste hours reading raw API docs for every integration. This SDK provides complete, typed coverage so you can integrate Paystack in minutes, not days.
+This started as a project to design and ship a typed Python API client end-to-end: a shared HTTP layer with automatic retry/backoff and structured exceptions, Pydantic v2 models for every response shape, full `mypy --strict` coverage, a mocked test suite, and a CI/CD pipeline that publishes to PyPI on tag.
+
+Paystack's API was the target because it's a real, well-documented payments API with a wide, varied surface — transactions, transfers, subscriptions, refunds, identity verification, webhooks — enough breadth to exercise the architecture properly.
 
 ---
 
 ## Installation
 
 ```bash
-pip install paystack-python
+pip install paystack-sdk-python
 ```
 
 ---
@@ -66,7 +67,7 @@ if result.data.status == "success":
 
 ## Key features
 
-### Typed responses — everywhere
+### Typed responses everywhere
 
 Every method returns a `PaystackResponse[T]` or `PaginatedResponse[T]`. Your editor knows the exact shape of `response.data` before you run a single line.
 
@@ -190,6 +191,7 @@ from paystack.exceptions import (
     AuthenticationError,
     InvalidRequestError,
     NotFoundError,
+    PaystackError,
     RateLimitError,
     RetryExhaustedError,
     ServerError,
@@ -212,7 +214,7 @@ except PaystackError as e:
 ## Development
 
 ```bash
-git clone https://github.com/yourusername/paystack-python
+git clone https://github.com/Barrkolawole22/paystack-python
 cd paystack-python
 pip install -e ".[dev]"
 
@@ -244,4 +246,4 @@ Areas where contributions are especially valued:
 
 ## License
 
-MIT © 2024
+MIT © 2026
